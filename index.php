@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h2>Регистрация</h2>
-        <form action="/register" method="POST">
+        <form action="action.php" method="POST">
             <label for="name">Имя:</label>
             <input type="text" id="name" name="name" required placeholder="Введите имя">
 
