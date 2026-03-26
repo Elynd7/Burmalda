@@ -1,3 +1,6 @@
 <?php
-echo mktime(10, 25, 0, 3, 15, 2025);
+$past = mktime(8, 5, 59, 10, 2, 1990);
+$now = time();
+$difference = $now - $past;
+echo "Разница в секундах: $difference";
 ?>
