@@ -1,4 +1,4 @@
 <?php
-    rename("test", "www");
+    rmdir("www");
 ?>
 
