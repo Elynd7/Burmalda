@@ -1,3 +1,4 @@
 <?php
-    rename("test.txt", "mir.txt");
+    mkdir("folder");
+    rename("mir.txt", "folder/mir.txt");
 ?>
