@@ -1,9 +1,10 @@
 <?php
-$date = date_create('2000-02-03');
+$now = time();
+$currentYear = date('Y', $now);
+$newYear = mktime(0, 0, 0, 1, 1, $currentYear + 1);
 
-date_modify($date, '+1 year +1 month +5 days');
-echo "После прибавления: " . date_format($date, 'd.m.Y') . "<br>";
+$secondsLeft = $newYear - $now;
+$daysLeft = floor($secondsLeft / (60 * 60 * 24));
 
-date_modify($date, '-3 days');
-echo "После вычитания 3 дней: " . date_format($date, 'd.m.Y'); 
+echo "До Нового Года осталось дней: $daysLeft";
 ?>
