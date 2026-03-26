@@ -1,5 +1,4 @@
 <?php
-    $file = fopen("test.txt", "w"); 
-    fwrite($file, "Привет, мир!");
-    fclose($file);
+    $text = file_get_contents("test.txt");
+    echo "В файле: " . $text . "<br>";
 ?>
