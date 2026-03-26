@@ -1,4 +1,4 @@
 <?php
-    mkdir("test");
+    rename("test", "www");
 ?>
 
