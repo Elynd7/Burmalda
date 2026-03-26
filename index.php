@@ -1,4 +1,3 @@
 <?php
-    mkdir("folder");
-    rename("mir.txt", "folder/mir.txt");
+    copy("folder/mir.txt", "folder/world.txt");
 ?>
