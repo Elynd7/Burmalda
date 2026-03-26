@@ -1,13 +1,12 @@
 <?php
-    $files = glob("*.jpg");
-    echo "Файлы .jpg в текущей папке:<br>";
-    if ($files) {
-        foreach ($files as $file) {
-            echo "   - " . $file . "<br>";
-        }
-    } else {
-        echo "Файлы .jpg не найдены.<br>";
+$filename = 'asdfok.txt';
+try {
+    $handle = @fopen($filename, 'r');
+    if ($handle === false) {
+        throw new Exception("Не удалось открыть файл: $filename");
     }
-
+    fclose($handle);
+} catch (Exception $ex) {
+    echo $ex->getMessage();
+}
 ?>
-
