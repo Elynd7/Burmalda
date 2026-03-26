@@ -1,9 +1,13 @@
 <?php
-    mkdir("test"); 
+    $files = glob("*.jpg");
+    echo "Файлы .jpg в текущей папке:<br>";
+    if ($files) {
+        foreach ($files as $file) {
+            echo "   - " . $file . "<br>";
+        }
+    } else {
+        echo "Файлы .jpg не найдены.<br>";
+    }
 
-    $names = ["papka1", "papka2", "papka3"];
-    foreach ($names as $name) {
-        mkdir("test/" . $name);
-}
 ?>
 
