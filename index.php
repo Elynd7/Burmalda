@@ -1,16 +1,13 @@
 <?php
-$a = 10;
-$b = 0;
+$countries = ['Spain' => 'Madrid', 'Russia' => 'Moscow'];
+$key = 'Germany';
 
 try {
-    if ($b == 0) {
-        throw new Exception("Деление на ноль невозможно!");
+    if (!array_key_exists($key, $countries)) {
+        throw new Exception("Ключ '$key' не существует в массиве");
     }
-    $result = $a / $b;
-    echo "Результат: $result";
+    echo $countries[$key];
 } catch (Exception $ex) {
-    $message = date('Y-m-d H:i:s') . " - Ошибка: " . $ex->getMessage() . PHP_EOL;
-    file_put_contents('log.txt', $message, FILE_APPEND);
     echo $ex->getMessage();
 }
 ?>
