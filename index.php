@@ -1,5 +1,5 @@
 <?php
-$days = [
+$week = [
     0 => 'Воскресенье',
     1 => 'Понедельник',
     2 => 'Вторник',
@@ -8,6 +8,9 @@ $days = [
     5 => 'Пятница',
     6 => 'Суббота'
 ];
-$dayOfWeek = date('w', mktime(0, 0, 0, 2, 2, 2000));
-echo $days[$dayOfWeek];
+
+echo "Сегодня: " . $week[date('w')] . "<br>";
+
+$birthday = date('w', mktime(0, 0, 0, 6, 12, 2016));
+echo "12.06.2016 было: " . $week[$birthday];
 ?>
