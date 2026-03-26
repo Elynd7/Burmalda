@@ -1,12 +1,16 @@
 <?php
-$filename = 'asdfok.txt';
+$a = 10;
+$b = 0;
+
 try {
-    $handle = @fopen($filename, 'r');
-    if ($handle === false) {
-        throw new Exception("Не удалось открыть файл: $filename");
+    if ($b == 0) {
+        throw new Exception("Деление на ноль невозможно!");
     }
-    fclose($handle);
+    $result = $a / $b;
+    echo "Результат: $result";
 } catch (Exception $ex) {
+    $message = date('Y-m-d H:i:s') . " - Ошибка: " . $ex->getMessage() . PHP_EOL;
+    file_put_contents('log.txt', $message, FILE_APPEND);
     echo $ex->getMessage();
 }
 ?>
