@@ -17,11 +17,15 @@ class Worker {
     }
 
     public function setAge($newAge) {
-        if ($newAge >= 18) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         } else {
-            echo "Вам работать в нашей компании еще рано\n";
+            echo "Вам работать в нашей компании еще рано<br>";
         }
+    }
+
+    private function checkAge($age) {
+        return $age >= 18;
     }
 }
 
@@ -37,8 +41,8 @@ $worker2->salary = 60000;
 
 echo "Сумма зарплат: " . ($worker1->getSalary() + $worker2->getSalary()) . " руб.<br>";
 
-$worker1->setAge(17);
-echo "Возраст после 17: " . $worker1->getAge() . "<br>";
-$worker1->setAge(26);
-echo "Возраст после 26: " . $worker1->getAge() . "<br>";
+$worker1->setAge(16);
+echo "Возраст после 16: " . $worker1->getAge() . "<br>";
+$worker1->setAge(28);
+echo "Возраст после 28: " . $worker1->getAge() . "<br>";
 ?>
