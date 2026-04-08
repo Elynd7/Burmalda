@@ -18,4 +18,6 @@ $worker2->name = "Костылев Эдуард";
 $worker2->age = 18;
 $worker2->salary = 1000000;
 
+echo "Сумма зарплат: " . ($worker1->salary + $worker2->salary) . " руб <br>";
+echo "Сумма возрастов: " . ($worker1->age + $worker2->age) . " лет";
 ?>
