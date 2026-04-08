@@ -3,6 +3,18 @@ class Worker {
     public $name;
     public $age;
     public $salary;
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getAge() {
+        return $this->age;
+    }
+
+    public function getSalary() {
+        return $this->salary;
+    }
 }
 
 $worker1 = new Worker();
@@ -15,6 +27,10 @@ $worker2->name = "Петр Петров";
 $worker2->age = 30;
 $worker2->salary = 60000;
 
-echo "Сумма зарплат: " . ($worker1->salary + $worker2->salary) . " руб.\n";
-echo "Сумма возрастов: " . ($worker1->age + $worker2->age) . " лет\n";
+echo "getName: " . $worker1->getName() . "<br>";
+echo "getAge: " . $worker1->getAge() . "<br>";
+echo "getSalary: " . $worker1->getSalary() . "<br>";
+
+echo "Сумма зарплат через getSalary: " . ($worker1->getSalary() + $worker2->getSalary()) . " руб.<br>";
+echo "Сумма возрастов: " . ($worker1->getAge() + $worker2->getAge()) . " лет";
 ?>
